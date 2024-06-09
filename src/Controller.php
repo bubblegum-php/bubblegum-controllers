@@ -6,7 +6,7 @@ use Bubblegum\Routes\RoutedComponent;
 
 class Controller extends RoutedComponent
 {
-    public function referToDestination(Request $request): string
+    public function content(Request $request, array $data = []): string
     {
         $response = call_user_func_array([$this, $this->destinationName], func_get_args());
         return match (gettype($response)) {
