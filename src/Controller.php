@@ -12,7 +12,7 @@ class Controller extends RoutedComponent
     /**
      * @throws ReflectionException
      */
-    public function content(Request $request, array $data = []): string
+    public function handle(Request $request, array $data = []): string
     {
         $data['request'] = $request;
         $response = $this->callDestinationWithArguments($data);
