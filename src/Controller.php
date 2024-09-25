@@ -9,6 +9,9 @@ use ReflectionException;
 
 class Controller extends RoutedComponent
 {
+
+    protected string $destinationName;
+
     /**
      * @throws ReflectionException
      */
@@ -23,6 +26,16 @@ class Controller extends RoutedComponent
                 header('Content-Type: application/json');
                 return json_encode($response);
         }
+    }
+
+    public function setDestinationName($destinationName): void
+    {
+        $this->destinationName = $destinationName;
+    }
+
+    public function getDestinationName(): string
+    {
+        return $this->destinationName;
     }
 
     /**
