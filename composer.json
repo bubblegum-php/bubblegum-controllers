@@ -14,10 +14,8 @@
         "source": "https://github.com/bubblegum-php/bubblegum-controllers"
     },
     "require": {
-        "php": "^8.0"
-    },
-    "require-dev": {
-        "bubblegum-php/bubblegum-core": "@dev"
+        "php": "^8.0",
+        "bubblegum-php/bubblegum-core": "1.0.*"
     },
     "autoload": {
         "psr-4": {
