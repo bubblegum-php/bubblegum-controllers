@@ -21,11 +21,5 @@
         "psr-4": {
             "Bubblegum\\": "src/"
         }
-    },
-    "repositories": [
-    {
-      "type": "git",
-      "url": "https://github.com/bubblegum-php/bubblegum-core.git"
     }
-  ]
 }
