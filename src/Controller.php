@@ -15,17 +15,10 @@ class Controller extends RoutedComponent
     /**
      * @throws ReflectionException
      */
-    public function handle(Request $request, array $data = []): string
+    public function handle(Request $request, array $data = []): string|array
     {
         $data['request'] = $request;
-        $response = $this->callDestinationWithArguments($data);
-        switch (gettype($response)) {
-            case 'string':
-                return $response;
-            default:
-                header('Content-Type: application/json');
-                return json_encode($response);
-        }
+        return $this->callDestinationWithArguments($data);
     }
 
     public function setDestinationName($destinationName): void
